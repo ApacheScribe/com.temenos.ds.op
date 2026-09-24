@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -30,23 +30,23 @@
 					<source>
 						<!-- WHATEVER YOU ADD BELOW MUST BE IN com.temenos.ds.op.base.parent/pom.xml AS WELL --> 
 						<repository>
-							<url>http://download.eclipse.org/eclipse/updates/4.4milestones/</url>
+							<url>https://download.eclipse.org/releases/luna</url>
 							<layout>p2</layout> <!-- supported layouts are "p2-metadata", "p2-artifacts", and "p2" (for joint repositories; default) -->
 						</repository>
 						<repository>
-							<url>http://repository.takari.io:8081/nexus/content/sites/m2e.extras/m2e/1.5.0/N/LATEST/</url>
+							<url>https://download.eclipse.org/technology/m2e/releases</url>
 							<layout>p2</layout>
 						</repository>
 						<repository>
-							<url>http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.7.0/N/0.7.0.201309291400/</url>
+							<url>https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.7.0/N/0.7.0.201309291400/</url>
 							<layout>p2</layout>
 						</repository>
 						<repository>
-							<url>http://download.eclipse.org/egit/updates-nightly</url>
+							<url>https://download.eclipse.org/egit/updates-nightly</url>
 							<layout>p2</layout>
 						</repository>
 						<repository>
-							<url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</url>
+							<url>https://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</url>
 							<layout>p2</layout>
 						</repository>
 					</source>
@@ -63,7 +63,7 @@
 						</iu>
  -->						
 						<!-- since tycho-extras 0.17.0, IUs can also be selected using p2 match queries -->
-						<!-- http://wiki.eclipse.org/Query_Language_for_p2 -->
+						<!-- https://wiki.eclipse.org/Query_Language_for_p2 -->
 <!-- 						
 						<iu>
 							<query>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.temenos.ds.op.base</groupId>
@@ -28,50 +28,50 @@
 		<repository>
 			<id>eclipse-project-luna</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/luna</url> <!-- NOT just http://download.eclipse.org/eclipse/updates/4.4milestones -->
+			<url>https://download.eclipse.org/releases/luna</url> <!-- NOT just https://download.eclipse.org/eclipse/updates/4.4milestones -->
 		</repository>
 <!--		
 		<repository>
 			<id>eclipse-release-luna</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/luna</url>
+			<url>https://download.eclipse.org/releases/luna</url>
 		</repository>
 -->
 		<repository>
 			<id>takari-m2e-latest</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/technology/m2e/milestones/1.5/</url>
+			<url>https://download.eclipse.org/technology/m2e/releases</url>
 			<!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=433653
-			<url>http://repository.takari.io:8081/nexus/content/sites/m2e.extras/m2e/1.5.0/N/LATEST/</url> -->
+			<url>https://repository.takari.io:8081/nexus/content/sites/m2e.extras/m2e/1.5.0/N/LATEST/</url> -->
 		</repository>
 		<repository>
 			<id>central-m2eclipse-tycho</id>
 			<layout>p2</layout>
-			<url>http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.7.0/N/0.7.0.201309291400/</url>
+			<url>https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.7.0/N/0.7.0.201309291400/</url>
 		</repository>
 		<repository>
 			<id>eclipse-egit-nightly</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/egit/updates-nightly</url>
+			<url>https://download.eclipse.org/egit/updates-nightly</url>
 		</repository>
 		<repository>
 			<id>eclipse-emf-compare</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/modeling/emf/compare/updates/releases/</url>
+			<url>https://download.eclipse.org/modeling/emf/compare/updates/releases/</url>
 		</repository>
 		<repository>
 			<id>eclipse-orbit-R20140525021250</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/</url>
+			<url>https://archive.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/</url>
 		</repository>
 		<repository>
 			<id>eclipse-team-svn-2.0</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/technology/subversive/2.0/update-site/</url>
+			<url>https://archive.eclipse.org/technology/subversive/2.0/update-site/</url>
 		</repository>
 			<!-- req. for org.eclipse.e4.core.tools in /*.base.sdk.repository/category.xml -->
 	<!-- Not working... :-( <repository> <id>vogella-e4tools-luna</id> <layout>p2</layout> 
-		<url>http://download.vogella.com/luna/e4tools</url> </repository> -->
+		<url>https://download.vogella.com/luna/e4tools</url> </repository> -->
 	</repositories>
 
 	<build>
