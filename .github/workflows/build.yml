@@ -1,0 +1,52 @@
+name: Build Design Studio SDK IDE
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (with submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 1
+
+      - name: Set up JDK 8
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 8
+
+      - name: Show versions
+        run: |
+          java -version
+          mvn -version
+
+      - name: Build offline p2 mirror (once)
+        run: |
+          rm -rf mirror/
+          mvn -f mirror-pom.xml prepare-package -B
+        timeout-minutes: 60
+
+      - name: Build product (offline)
+        run: |
+          mvn -o clean package -B
+        timeout-minutes: 60
+
+      - name: Locate product
+        run: |
+          find . -path '*products*' -type d | head -20
+          find . -name 'eclipse' -type f | head -20
+
+      - name: Upload product
+        uses: actions/upload-artifact@v4
+        with:
+          name: ds-op-sdk-ide
+          path: |
+            base/releng/com.temenos.ds.op.base.sdk.repository/target/products/
+            **/target/products/
+          if-no-files-found: warn
